@@ -1,0 +1,126 @@
+.skip-link {
+    @apply fixed left-16 -top-60 z-100 bg-white p-12 focus:top-12
+}
+
+/* Sits above the sticky header so it scrolls away; leading = the reference's fixed 30px / 27px bar height. */
+.roofline {
+    @apply flex items-center justify-end bg-linen px-56 text-12 leading-30 tracking-roofline text-ash
+    max-950:justify-center max-950:px-12 max-640:text-11 max-640:leading-27 max-640:tracking-nav
+}
+
+body>header {
+    @apply sticky top-0 z-20 bg-cream py-12 text-ink
+}
+
+body>header a {
+    @apply hover:text-taupe
+}
+
+/* Above 1650px the reference centres a 1450px bar, so the cap only applies there. */
+.header-bar {
+    @apply flex items-center justify-between gap-24 min-1650:mx-auto min-1650:max-w-1440
+}
+
+/* The 400×200 logo is contained in a 220×87 (190×87 below 1150) box in the reference, which renders it at 174×87, centred. */
+.brand {
+    @apply flex shrink-0 justify-center basis-220 max-1150:basis-190
+}
+
+/* Bars are drawn with a 1px top border; padding pads the 27×9 bars out to the reference's 44×44 hit area. */
+.menu-toggle {
+    @apply hidden flex-col justify-center gap-7 border-0 bg-transparent py-17.5 pr-9 pl-8 max-950:flex
+}
+
+.menu-toggle span {
+    @apply block border-t-1 border-solid border-ink pl-27
+}
+
+.main-nav {
+    @apply flex items-center gap-23 max-1150:gap-14 max-950:absolute max-950:inset-x-0 max-950:top-full
+    max-950:hidden max-950:max-h-nav-panel max-950:overflow-y-auto max-950:bg-cream max-950:px-30 max-950:pt-18 max-950:pb-26
+}
+
+.main-nav.open {
+    @apply max-950:block
+}
+
+.nav-item {
+    @apply relative py-34 max-950:py-8
+}
+
+.nav-link {
+    @apply border-b-1 border-solid border-transparent py-7 text-14 font-medium tracking-nav whitespace-nowrap
+    uppercase max-1150:text-12 max-950:inline-block max-950:text-16
+}
+
+.nav-link[aria-current="page"] {
+    @apply border-taupe
+}
+
+/* min-w-245 is copied from the reference: dropdown width cannot be derived from its short link labels. */
+.dropdown {
+    @apply absolute top-full -left-20 -mt-6 hidden min-w-245 bg-white py-12 text-ink shadow-dropdown max-950:static max-950:mt-0 max-950:block max-950:min-w-0 max-950:bg-transparent max-950:pt-0 max-950:pr-0 max-950:pb-8 max-950:pl-12 max-950:shadow-none
+}
+
+.nav-item:hover .dropdown, .nav-item:focus-within .dropdown {
+    @apply block
+}
+
+.dropdown a {
+    @apply block px-20 py-10 text-14 leading-1.5 hover:bg-pale hover:text-ink max-950:px-10 max-950:py-5 max-950:hover:bg-stone
+}
+
+body>footer {
+    @apply bg-espresso pt-32 pb-16 leading-1.5 text-ivory max-640:pt-30
+}
+
+.footer-grid {
+    @apply grid grid-cols-wide-first gap-70 pb-22 max-950:gap-35 max-640:grid-cols-1 max-640:gap-24
+}
+
+.footer-brand {
+    @apply block font-cormorant text-40 leading-1.2
+}
+
+body>footer h3 {
+    @apply mb-10 text-16
+}
+
+body>footer .content p {
+    @apply mb-8 text-14 leading-1.85
+}
+footer .content-wrap {
+    @apply max-w-1245
+}
+
+.footer-tag {
+    @apply mt-12
+}
+
+.footer-tag p {
+    @apply tracking-tag
+}
+
+.footer-link {
+    @apply block text-14
+}
+
+.footer-visit {
+    @apply mt-10 underline underline-offset-5
+}
+
+.social-link {
+    @apply mt-12 flex gap-25
+}
+
+.social-link a {
+    @apply inline-flex items-center gap-8 text-14
+}
+
+.footer-bottom {
+    @apply flex justify-between border-t-1 border-solid border-umber pt-14 text-12 text-pebble max-640:block
+}
+
+.footer-bottom span {
+    @apply max-640:mb-8 max-640:block
+}

@@ -1,0 +1,109 @@
+@import "tailwindcss";
+@import "./base.css";
+@import "./component.css";
+@import "./layout.css";
+@import "./utilities.css";
+
+@theme {
+  --breakpoint-1920: 1921px;
+  --breakpoint-1650: 1650px;
+  --breakpoint-1600: 1601px;
+  --breakpoint-1512: 1513px;
+  --breakpoint-1440: 1441px;
+  --breakpoint-1366: 1367px;
+  --breakpoint-1199: 1200px;
+  --breakpoint-1150: 1151px;
+  --breakpoint-1024: 1025px;
+  --breakpoint-992: 993px;
+  --breakpoint-950: 951px;
+  --breakpoint-768: 769px;
+  --breakpoint-640: 641px;
+  --breakpoint-576: 577px;
+  --breakpoint-425: 426px;
+  --breakpoint-375: 376px;
+
+  --spacing: 1px;
+  --spacing-15\.40625: 15.40625px;
+  --spacing-nav-panel: calc(100dvh - 80px);
+  --spacing-hero: min(760px, calc(100vh - 124px));
+
+  --font-cormorant: "Cormorant Garamond", Georgia, serif;
+  --font-manrope: "Manrope", Arial, sans-serif;
+
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-ink: #34332f;
+  --color-taupe: #696158;
+  --color-taupe-dark: #514b44;
+  --color-taupe-light: #a69d92;
+  --color-taupe-glass: #696158e8;
+  --color-muted: #73716a;
+  --color-muted-dark: #66665f;
+  --color-placeholder: #757575;
+  --color-pale: #f3f3f1;
+  --color-line: #d9d9d3;
+  --color-mocha: #8f8172;
+  --color-bronze: #a38259;
+  --color-linen: #f3f2ef;
+  --color-ash: #67635d;
+  --color-cream: #f7f6f3;
+  --color-stone: #e8e6e2;
+  --color-divider: #ccc8c0;
+  --color-divider-light: #cecec6;
+  --color-shade: #171816;
+  --color-espresso: #514d47;
+  --color-ivory: #f4f2ef;
+  --color-sand: #d6d2cb;
+  --color-umber: #77716a;
+  --color-pebble: #c6c1b9;
+  --color-mist: #ccc9c2;
+
+  --text-heading-1: clamp(52px, 5.2vw, 84px);
+  --text-heading-2: clamp(36px, 3.4vw, 58px);
+  --text-heading-3: 17px;
+  --text-card-heading: clamp(30px, 2.5vw, 44px);
+  --text-64: 64px;
+  --text-48: 48px;
+  --text-46: 46px;
+  --text-44: 44px;
+  --text-40: 40px;
+  --text-32: 32px;
+  --text-16: 16px;
+  --text-15: 15px;
+  --text-14: 14px;
+  --text-13: 13px;
+  --text-11: 11px;
+  --text-14: 14px;
+  --text-12: 12px;
+
+  --leading-1\.03: 1.03;
+  --leading-1\.06: 1.06;
+  --leading-1\.1: 1.1;
+  --leading-1\.12: 1.12;
+  --leading-1\.2: 1.2;
+  --leading-1\.5: 1.5;
+  --leading-1\.6: 1.6;
+  --leading-1\.65: 1.65;
+  --leading-1\.8: 1.8;
+  --leading-1\.85: 1.85;
+  --leading-1\.9: 1.9;
+
+  --tracking-heading: -0.022em;
+  --tracking-nav: 0.02em;
+  --tracking-caps: 0.045em;
+  --tracking-roofline: 0.055em;
+  --tracking-tag: 0.12em;
+  --tracking-eyebrow: 0.14em;
+
+  --text-shadow-soft: 0 2px 5px #0009, 0 0 22px #0005;
+  --text-shadow-strong: 0 2px 5px #000c, 0 0 20px #0009;
+  --shadow-dropdown: 0 10px 25px #0002;
+
+  --grid-template-columns-wide-narrow: 1.3fr 1fr;
+  --grid-template-columns-narrow-wide: 1fr 1.3fr;
+  --grid-template-columns-fill-auto: 1fr auto;
+  --grid-template-columns-wide-first: 1.35fr 1fr 1fr;
+
+  --object-position-hero: center 52%;
+  --object-position-hero-mobile: 54% center;
+}
