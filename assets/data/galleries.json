@@ -1,0 +1,27 @@
+{
+  "lakeside": [
+    { "src": "/assets/images/projects-03.webp", "caption": "Lakeside Country Club" },
+    { "src": "/assets/images/projects-02.webp", "caption": "Lakeside Country Club · Kobie Ryan Photography" }
+  ],
+  "ivanhoe": [
+    { "src": "/assets/images/projects-04.webp", "caption": "Ivanhoe · Felix Sanchez" },
+    { "src": "/assets/images/projects-05.webp", "caption": "Ivanhoe · Felix Sanchez" },
+    { "src": "/assets/images/projects-06.webp", "caption": "Ivanhoe · Felix Sanchez" },
+    { "src": "/assets/images/projects-07.webp", "caption": "Ivanhoe · Felix Sanchez" }
+  ],
+  "carolina-herrera": [
+    { "src": "/assets/images/commercial-02.webp", "caption": "Carolina Herrera · Reference images · final photography pending" },
+    { "src": "/assets/images/commercial-03.webp", "caption": "Carolina Herrera · Reference images · final photography pending" }
+  ],
+  "granduca": [
+    { "src": "/assets/images/commercial-04.webp", "caption": "Hotel Granduca · Reference image · final photography pending" }
+  ],
+  "liberty": [
+    { "src": "/assets/images/commercial-05.webp", "caption": "International Leadership of Texas – Liberty High School" },
+    { "src": "/assets/images/commercial-06.webp", "caption": "International Leadership of Texas – Liberty High School" }
+  ],
+  "sst": [
+    { "src": "/assets/images/commercial-07.webp", "caption": "School of Science and Technology (SST) East Sonterra" },
+    { "src": "/assets/images/commercial-08.webp", "caption": "School of Science and Technology (SST) East Sonterra" }
+  ]
+}

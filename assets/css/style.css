@@ -26,6 +26,8 @@
   --spacing-15\.40625: 15.40625px;
   --spacing-nav-panel: calc(100dvh - 80px);
   --spacing-hero: min(760px, calc(100vh - 124px));
+  --spacing-gallery-image: calc(100% - 65px);
+  --spacing-gallery-image-sm: calc(100% - 110px);
 
   --font-cormorant: "Cormorant Garamond", Georgia, serif;
   --font-manrope: "Manrope", Arial, sans-serif;
@@ -57,17 +59,34 @@
   --color-umber: #77716a;
   --color-pebble: #c6c1b9;
   --color-mist: #ccc9c2;
+  --color-smoke: #959086;
+  --color-fog: #c9c7c1;
+  --color-night: #171715;
 
   --text-heading-1: clamp(52px, 5.2vw, 84px);
   --text-heading-2: clamp(36px, 3.4vw, 58px);
   --text-heading-3: 17px;
   --text-card-heading: clamp(30px, 2.5vw, 44px);
+  --text-page-title: clamp(48px, 5vw, 80px);
+  --text-quote: clamp(27px, 2.25vw, 38px);
   --text-64: 64px;
+  --text-58: 58px;
   --text-48: 48px;
   --text-46: 46px;
   --text-44: 44px;
+  --text-43: 43px;
+  --text-42: 42px;
   --text-40: 40px;
+  --text-35: 35px;
+  --text-34: 34px;
+  --text-37: 37px;
+  --text-36: 36px;
   --text-32: 32px;
+  --text-30: 30px;
+  --text-27: 27px;
+  --text-23: 23px;
+  --text-22: 22px;
+  --text-18: 18px;
   --text-16: 16px;
   --text-15: 15px;
   --text-14: 14px;
@@ -80,13 +99,19 @@
   --leading-1\.06: 1.06;
   --leading-1\.1: 1.1;
   --leading-1\.12: 1.12;
+  --leading-1\.15: 1.15;
   --leading-1\.2: 1.2;
+  --leading-1\.35: 1.35;
+  --leading-1\.4: 1.4;
+  --leading-1\.45: 1.45;
   --leading-1\.5: 1.5;
   --leading-1\.6: 1.6;
   --leading-1\.65: 1.65;
+  --leading-1\.7: 1.7;
   --leading-1\.8: 1.8;
   --leading-1\.85: 1.85;
   --leading-1\.9: 1.9;
+  --leading-1\.95: 1.95;
 
   --tracking-heading: -0.022em;
   --tracking-nav: 0.02em;
@@ -103,7 +128,47 @@
   --grid-template-columns-narrow-wide: 1fr 1.3fr;
   --grid-template-columns-fill-auto: 1fr auto;
   --grid-template-columns-wide-first: 1.35fr 1fr 1fr;
+  --grid-template-columns-media-text: 0.75fr 1.3fr;
+  --grid-template-columns-credits: 150px 1fr;
+  --grid-template-columns-credits-sm: 90px 1fr;
+  --grid-template-columns-credits-md: 95px 1fr;
 
   --object-position-hero: center 52%;
   --object-position-hero-mobile: 54% center;
+  --object-position-banner-top: center 60%;
+
+  --scale-photo-hover: 101.5%;
+
+  /* GLightbox runs these through the class names it toggles (gfadeIn, gslideInRight, ...); only opacity and transform animate. */
+  --animate-lightbox-fade-in: lightbox-fade-in 0.5s ease;
+  --animate-lightbox-fade-out: lightbox-fade-out 0.5s ease;
+  --animate-lightbox-slide-in-left: lightbox-slide-in-left 0.3s ease;
+  --animate-lightbox-slide-out-left: lightbox-slide-out-left 0.3s ease;
+  --animate-lightbox-slide-in-right: lightbox-slide-in-right 0.3s ease;
+  --animate-lightbox-slide-out-right: lightbox-slide-out-right 0.3s ease;
+
+  @keyframes lightbox-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes lightbox-fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+  @keyframes lightbox-slide-in-left {
+    from { opacity: 0; transform: translate3d(-60%, 0, 0); }
+    to { opacity: 1; transform: translate3d(0, 0, 0); }
+  }
+  @keyframes lightbox-slide-out-left {
+    from { opacity: 1; transform: translate3d(0, 0, 0); }
+    to { opacity: 0; transform: translate3d(-60%, 0, 0); }
+  }
+  @keyframes lightbox-slide-in-right {
+    from { opacity: 0; transform: translate3d(60%, 0, 0); }
+    to { opacity: 1; transform: translate3d(0, 0, 0); }
+  }
+  @keyframes lightbox-slide-out-right {
+    from { opacity: 1; transform: translate3d(0, 0, 0); }
+    to { opacity: 0; transform: translate3d(60%, 0, 0); }
+  }
 }

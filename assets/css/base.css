@@ -1,123 +1,178 @@
+*,
+*::before,
+*::after {
+  @apply box-border;
+}
+
 html {
-    @apply scroll-smooth scroll-pt-135 max-640:scroll-pt-100 motion-reduce:scroll-auto
+    @apply box-border scroll-smooth scroll-pt-135 max-640:scroll-pt-100 motion-reduce:scroll-auto;
 }
 
 /* Lenis (assets/js/smoothScroll.js) adds .lenis to html; native smooth scrolling would fight its easing. */
 html.lenis {
-    @apply scroll-auto
+    @apply scroll-auto;
 }
 
 html.lenis, html.lenis body {
-    @apply h-auto
+    @apply h-auto;
 }
 
 /* Nested scroll areas (the mobile nav panel) opt out of Lenis with data-lenis-prevent. */
 .lenis [data-lenis-prevent] {
-    @apply overscroll-contain
+    @apply overscroll-contain;
 }
+a,
+button,
+input,
+textarea,
+select {
+  @apply shadow-none outline-0;
+}
+input[type="number"] {
+    appearance: textfield;
+  }
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    @apply m-0 appearance-none;
+  }
+  
+  a:focus,
+  button:focus,
+  input:focus,
+  textarea:focus,
+  select:focus {
+    @apply outline-1! outline-dotted!;
+  }
+
+  p {
+    @apply m-0 p-0;
+  }
+  
+  p + p {
+    @apply mt-20 768:mt-30 1024:mt-28;
+  }
+  
+  ul {
+    @apply m-0 p-0;
+  }
+  
+  ul li {
+    @apply list-none;
+  }
+  
+  img {
+    @apply block;
+  }
 
 body {
-    @apply bg-white font-manrope text-16 leading-1.8 font-normal text-ink
+    @apply bg-white font-manrope text-16 leading-1.8 font-normal text-ink;
 }
 
 a {
-    @apply hover:text-mocha
+    @apply hover:text-mocha;
 }
 
 a, button, input, select, textarea {
-    @apply touch-manipulation focus-visible:outline-2 focus-visible:outline-solid focus-visible:outline-bronze focus-visible:outline-offset-5
+    @apply touch-manipulation focus-visible:outline-2 focus-visible:outline-solid focus-visible:outline-bronze focus-visible:outline-offset-5;
 }
 
 button {
-    @apply cursor-pointer
+    @apply cursor-pointer;
 }
 
 h1, .h1, h2, .h2 {
-    @apply font-cormorant font-medium leading-1.06 tracking-heading
+    @apply font-cormorant font-medium leading-1.06 tracking-heading;
 }
 
 h1, .h1 {
-    @apply text-heading-1 max-640:text-[50px] max-640:leading-1.03
+    @apply text-heading-1 max-640:text-[50px] max-640:leading-1.03;
 }
 
 h2, .h2 {
-    @apply text-heading-2
+    @apply text-heading-2;
 }
 
 h3, .h3 {
-    @apply text-heading-3 font-medium leading-1.5
+    @apply text-heading-3 font-medium leading-1.5;
 }
 
 .content p {
-    @apply text-16
+    @apply text-16;
 }
 
 .content p+p {
-    @apply mt-22
+    @apply mt-22;
 }
 
 /* Small uppercase label above section headings (the reference's "eyebrow"). */
 .content-15 {
-    @apply mb-20
+    @apply mb-20;
 }
 .content-14 p {
-    @apply text-14 font-medium leading-1.6 tracking-eyebrow uppercase
+    @apply text-14 font-medium leading-1.6 tracking-eyebrow uppercase;
 }
 
 .content-15 p {
-    @apply text-15 font-medium leading-1.6 tracking-eyebrow uppercase max-640:text-14
+    @apply text-15 font-medium leading-1.6 tracking-eyebrow uppercase max-640:text-14;
 }
 
 .content-16 p {
-    @apply text-16 max-640:text-14
+    @apply text-16 max-640:text-14;
 }
 
 .content-13 p {
-    @apply text-13 leading-1.65
+    @apply text-13 leading-1.65;
+}
+.content-12 p {
+    @apply text-12 leading-1.65;
 }
 
 .title-ink h1, .title-ink h2, .title-ink h3 {
-    @apply text-ink
+    @apply text-ink;
 }
 
 .title-white h1, .title-white h2, .title-white h3 {
-    @apply text-white
+    @apply text-white;
 }
 
 .title-ivory h1, .title-ivory h2, .title-ivory h3 {
-    @apply text-ivory
+    @apply text-ivory;
 }
 
 .content-ink p {
-    @apply text-ink
+    @apply text-ink;
 }
 
 .content-white p {
-    @apply text-white
+    @apply text-white;
 }
 
 .content-ivory p {
-    @apply text-ivory
+    @apply text-ivory;
 }
 
 .content-muted p {
-    @apply text-muted
+    @apply text-muted;
 }
 
 .content-muted-dark p {
-    @apply text-muted-dark
+    @apply text-muted-dark;
 }
 
 .content-sand p {
-    @apply text-sand
+    @apply text-sand;
+}
+
+.content-smoke p {
+    @apply text-smoke;
 }
 
 .container-fluid {
-    @apply px-56 max-1150:px-36 max-640:px-20
+    @apply px-56 max-1150:px-36 max-640:px-20;
 }
 
 .container-fluid-md {
-    @apply px-48 min-1650:px-56 max-1150:px-25
+    @apply px-48 min-1650:px-56 max-1150:px-25;
 }
 .eyebrow p {
     @apply mb-20;

@@ -1,179 +1,207 @@
-.eyebrow {
-    @apply mb-20 block text-16 font-medium leading-1.6 tracking-eyebrow uppercase max-640:text-13
+.intro-section {
+    @apply bg-white pt-100 pb-100 max-950:pt-70 max-950:pb-70 max-640:pt-55 max-640:pb-55;
 }
 
+.cards-section {
+    @apply bg-stone pt-80 pb-80 max-640:pt-55 max-640:pb-55;
+}
+
+.split-section
+{
+    @apply bg-cream pt-90 pb-90;
+}
+
+.feature-banner {
+    @apply bg-shade pb-65 max-640:pb-40;
+}
+
+.cta-section {
+    @apply bg-white pt-95 pb-95 max-640:pt-55 max-640:pb-55;
+}
+
+.gallery-section {
+    @apply  bg-white pt-70 pb-70 max-640:pt-45 max-640:pb-45;
+}
+    
+
 .content-wrap {
-    @apply mx-auto max-w-1260
+    @apply mx-auto max-w-1260;
 }
 
 .btn-group {
-    @apply flex flex-wrap gap-14 max-640:gap-10
+    @apply flex flex-wrap gap-14 max-640:gap-10;
 }
 
 /* py-15.40625 keeps the 52px height with the smaller label. */
 .btn-group .btn {
-    @apply max-640:px-17 max-640:py-15.40625 max-640:text-12
+    @apply max-640:px-17 max-640:py-15.40625 max-640:text-12;
 }
 
 /* Full-bleed photo behind a section's content. */
 .cover-image {
-    @apply absolute inset-0 -z-1 h-full w-full object-cover
+    @apply absolute inset-0 -z-1 h-full w-full object-cover;
 }
 
-/* Dark gradient panel behind copy laid over a photo, keeping white text readable without darkening the whole image. */
 .overlay-copy {
-    @apply relative isolate before:pointer-events-none before:absolute before:-inset-x-42 before:-inset-y-28 before:-z-1 before:bg-linear-to-r/srgb before:from-shade/65 before:via-shade/25 before:via-80% before:to-transparent max-640:before:-inset-20
+    @apply relative isolate before:pointer-events-none before:absolute before:-inset-x-42 before:-inset-y-28 before:-z-1 before:bg-linear-to-r/srgb before:from-shade/65 before:via-shade/25 before:via-80% before:to-transparent max-640:before:-inset-20;
 }
 
 .hero-banner {
-    @apply relative isolate flex h-hero min-h-590 flex-col justify-end overflow-hidden text-white max-950:h-650
+    @apply relative isolate flex h-hero min-h-590 flex-col justify-end overflow-hidden text-white max-950:h-650;
 }
 .hero-banner .content-wrap{
-    @apply max-w-1245
+    @apply max-w-1245;
 }
 .hero-banner .cover-image {
-    @apply object-hero max-640:object-hero-mobile
+    @apply object-hero max-640:object-hero-mobile;
 }
 
 .banner-content {
-    @apply max-w-770 text-shadow-soft max-950:max-w-none
+    @apply max-w-770 text-shadow-soft max-950:max-w-none;
 }
 
 .hero-banner .title {
-    @apply mb-24 max-w-760 max-950:max-w-680 max-640:max-w-420
+    @apply mb-24 max-w-760 max-950:max-w-680 max-640:max-w-420;
 }
 
 .hero-banner .content {
-    @apply mb-28 max-w-670 max-640:max-w-380
+    @apply mb-28 max-w-670 max-640:max-w-380;
 }
 
 .hero-banner .content p {
-    @apply text-16 leading-1.65 max-640:text-14
+    @apply text-16 leading-1.65 max-640:text-14;
+}
+
+/* Banner label: .content.eyebrow outranks the .hero-banner .content rules above, so other sections' eyebrows are untouched. */
+.hero-banner .content.eyebrow {
+    @apply mb-20 max-w-none;
+}
+
+.hero-banner .content.eyebrow p {
+    @apply font-medium leading-1.6 tracking-eyebrow uppercase;
 }
 
 .hero-banner .btn {
-    @apply text-shadow-none
+    @apply text-shadow-none;
 }
 
 .intro-grid {
-    @apply grid grid-cols-2 gap-110 max-1150:gap-60 max-950:gap-45 max-640:grid-cols-1 max-640:gap-28
+    @apply grid grid-cols-2 gap-110 max-1150:gap-60 max-950:gap-45 max-640:grid-cols-1 max-640:gap-28;
 }
 
 .intro-grid h2 {
-    @apply max-640:text-44
+    @apply max-640:text-44;
 }
 
 .section-heading {
-    @apply mb-44 flex items-end justify-between gap-40 max-640:mb-30 max-640:block
+    @apply mb-44 flex items-end justify-between gap-40 max-640:mb-30 max-640:block;
 }
 
 .section-heading .text-link {
-    @apply shrink-0 max-640:mt-20
+    @apply shrink-0 max-640:mt-20;
 }
 
 .section-heading h2 {
-    @apply max-640:text-44
+    @apply max-640:text-44;
 }
 
 .card-grid {
-    @apply grid grid-cols-3 gap-24 max-640:grid-cols-1
+    @apply grid grid-cols-3 gap-24 max-640:grid-cols-1;
 }
 
 .image-card {
-    @apply relative isolate flex min-h-480 flex-col justify-end overflow-hidden bg-black p-32 text-white hover:text-white max-1150:p-24 max-950:min-h-440 max-640:p-30 before:absolute before:inset-0 before:-z-1 before:bg-linear-to-b/srgb before:from-transparent before:from-30% before:to-black/60
+    @apply relative isolate flex min-h-480 flex-col justify-end overflow-hidden bg-black p-32 text-white hover:text-white max-1150:p-24 max-950:min-h-440 max-640:p-30 before:absolute before:inset-0 before:-z-1 before:bg-linear-to-b/srgb before:from-transparent before:from-30% before:to-black/60;
 }
 
 .image-card img {
-    @apply absolute inset-0 -z-2 h-full w-full object-cover transition-opacity duration-250 motion-reduce:transition-none
+    @apply absolute inset-0 -z-2 h-full w-full object-cover transition-opacity duration-250 motion-reduce:transition-none;
 }
 
 .image-card:hover img {
-    @apply opacity-94
+    @apply opacity-94;
 }
 
 .image-card .title {
-    @apply mb-18
+    @apply mb-18;
 }
 
 .image-card h3 {
-    @apply font-cormorant text-card-heading leading-1.12 max-1150:text-32 max-640:text-40
+    @apply font-cormorant text-card-heading leading-1.12 max-1150:text-32 max-640:text-40;
 }
 
 .image-card .content p {
-    @apply text-14 leading-1.9 tracking-caps uppercase
+    @apply text-14 leading-1.9 tracking-caps uppercase;
 }
 
 .split-grid {
-    @apply grid grid-cols-wide-narrow gap-70 max-640:grid-cols-1 max-640:gap-35
+    @apply grid grid-cols-wide-narrow gap-70 max-640:grid-cols-1 max-640:gap-35;
 }
 
 .split-grid h2 {
-    @apply max-640:text-46
+    @apply max-640:text-46;
 }
 .feature-banner .content-wrap {
     @apply max-w-1245;
 }
 
 .feature-list {
-    @apply border-l-1 border-solid border-divider pl-45 max-950:pl-30 max-640:border-t-1 max-640:border-l-0 max-640:pt-25 max-640:pl-0
+    @apply border-l-1 border-solid border-divider pl-45 max-950:pl-30 max-640:border-t-1 max-640:border-l-0 max-640:pt-25 max-640:pl-0;
 }
 
 .feature-item {
-    @apply border-b-1 border-solid border-divider-light py-20 first:pt-0
+    @apply border-b-1 border-solid border-divider-light py-20 first:pt-0;
 }
 
 .feature-item .title {
-    @apply mb-8
+    @apply mb-8;
 }
 
 .feature-item h3 {
-    @apply font-cormorant text-32 leading-1.1
+    @apply font-cormorant text-32 leading-1.1;
 }
 
 .feature-item .content p {
     @apply text-14;
 }
 
-/* Fixed heights copied from the reference: the copy is pinned to the bottom of a full-bleed photo. */
 .feature-banner {
-    @apply relative isolate flex h-650 flex-col justify-end overflow-hidden text-white max-950:h-570 max-640:h-500
+    @apply relative isolate flex h-650 flex-col justify-end overflow-hidden text-white max-950:h-570 max-640:h-500;
 }
 
 .feature-content {
-    @apply max-w-600 text-shadow-strong max-640:max-w-400
+    @apply max-w-600 text-shadow-strong max-640:max-w-400;
 }
 
 .feature-banner h2 {
-    @apply text-64 max-640:text-48
+    @apply text-64 max-640:text-48;
 }
 
 .cta-row {
-    @apply flex items-center justify-between gap-70 max-950:gap-40 max-640:block
+    @apply flex items-center justify-between gap-70 max-950:gap-40 max-640:block;
 }
 
 .cta-row h2 {
-    @apply max-640:text-44
+    @apply max-640:text-44;
 }
 
 .cta-row .btn {
-    @apply shrink-0 max-640:mt-25
+    @apply shrink-0 max-640:mt-25;
 }
 
-/* The borders span the content column, not the full width, so the vertical padding sits inside them on this wrapper. */
 .newsletter-row {
-    @apply grid grid-cols-narrow-wide items-center gap-75 border-y-1 border-solid border-line max-950:gap-35 max-640:grid-cols-1 max-640:gap-20
+    @apply grid grid-cols-narrow-wide items-center gap-75 border-y-1 border-solid border-line max-950:gap-35 max-640:grid-cols-1 max-640:gap-20;
 }
 
 .newsletter-row h2 {
-    @apply text-40
+    @apply text-40;
 }
 
 .newsletter-form {
-    @apply grid grid-cols-fill-auto gap-12 max-640:gap-8
+    @apply grid grid-cols-fill-auto gap-12 max-640:gap-8;
 }
 
 .newsletter-form .btn {
-    @apply max-640:px-17
+    @apply max-640:px-17;
 }
 
 .cards-section .content-wrap {
@@ -181,13 +209,426 @@
 }
 
 .gallery-section h2 {
-    @apply text-44
+    @apply text-44;
 }
 
 .photo-grid {
-    @apply grid grid-cols-4 gap-15 max-640:grid-cols-2 max-640:gap-10
+    @apply grid grid-cols-4 gap-15 max-640:grid-cols-2 max-640:gap-10;
 }
 
 .photo-grid img {
-    @apply aspect-square w-full object-cover
+    @apply aspect-square w-full object-cover;
+}
+.hero-banner {
+    @apply bg-shade pb-70 max-640:pb-40; 
+}
+.inner-banner {
+    @apply h-640;
+}
+.numbered-card-grid {
+    @apply grid grid-cols-3 gap-20 max-950:grid-cols-2 max-640:grid-cols-1;
+}
+
+.numbered-card {
+    @apply border-1 border-solid border-sand bg-stone p-30;
+}
+
+.numbered-card .card-number p {
+    @apply font-cormorant text-22;
+}
+
+.numbered-card .title {
+    @apply mt-12 mb-16;
+}
+
+.numbered-card h3 {
+    @apply font-cormorant text-30 leading-1.15;
+}
+
+.numbered-card .content p {
+    @apply leading-[26px];
+}
+
+.numbered-cards-section .intro-grid {
+    @apply mb-100 max-950:mb-70 max-640:mb-55;
+}
+
+.image-with-content {
+    @apply grid grid-cols-2 max-950:grid-cols-1;
+}
+
+.image-with-content > img {
+    @apply h-full w-full min-h-540 object-cover max-950:h-400 max-950:min-h-0 max-640:h-280;
+}
+
+.image-with-content-copy {
+    @apply px-65 py-70 max-1150:px-40 max-1150:py-55 max-950:px-36 max-640:px-20 max-640:py-45;
+}
+
+.image-with-content h2 {
+    @apply text-48 max-640:text-42;
+}
+
+.testimonial-section {
+    @apply text-center;
+}
+
+.testimonial-section .eyebrow p{
+    @apply mb-25;
+}
+
+.testimonial-slider {
+    @apply mx-auto max-w-960;
+}
+
+.swiper {
+    @apply relative z-1 mx-auto block overflow-hidden;
+}
+
+.swiper-wrapper {
+    @apply relative z-1 box-content flex w-full transition-transform;
+}
+
+.swiper-slide {
+    @apply relative w-full shrink-0;
+}
+
+.swiper-notification {
+    @apply pointer-events-none absolute top-0 left-0 -z-1 opacity-0;
+}
+
+.swiper-autoheight .swiper-wrapper {
+    @apply items-start;
+}
+
+.testimonial-slide blockquote {
+    @apply mx-auto mb-25 font-cormorant text-quote leading-1.4 font-normal max-640:text-27;
+}
+
+.testimonial-slide figcaption {
+    @apply mx-auto max-w-700 text-15 leading-1.7 font-medium max-640:text-14;
+}
+
+.slider-controls {
+    @apply mt-28 flex items-center justify-center gap-25 text-muted;
+}
+
+.slider-controls button {
+    @apply size-44 bg-transparent font-cormorant text-32 leading-none hover:text-ink;
+}
+
+.slider-controls span {
+    @apply text-12;
+}
+
+.slider-controls .slider-pause {
+    @apply w-auto min-w-55 font-manrope text-12;
+}
+
+.media-text-grid {
+    @apply grid grid-cols-media-text items-start gap-100 max-1150:gap-60 max-950:gap-45 max-640:grid-cols-1 max-640:gap-35;
+}
+
+.media-text-grid img {
+    @apply h-auto w-full object-contain;
+}
+
+.media-text-grid figcaption {
+    @apply mt-18 text-14;
+}
+
+.media-note {
+    @apply mt-14;
+}
+
+.media-text-grid > .content p {
+    @apply mt-0 mb-24;
+}
+
+.page-title {
+    @apply mb-60 max-640:mb-35;
+}
+
+.page-title h1 {
+    @apply text-page-title max-640:text-48 max-640:leading-1.06;
+}
+
+.media-text-section {
+    @apply bg-white pt-80 pb-90 max-640:pt-55 max-640:pb-50
+}
+.projects-grid {
+    @apply grid grid-cols-2 gap-30 max-640:grid-cols-1 max-640:gap-40;
+}
+
+.project-entry {
+    @apply min-w-0;
+}
+
+.project-photo {
+    @apply relative block w-full overflow-hidden p-0 text-left text-white;
+}
+
+.project-photo img {
+    @apply aspect-video w-full object-cover transition-transform duration-500 motion-reduce:transition-none max-640:aspect-4/3;
+}
+
+.project-photo:hover img {
+    @apply scale-photo-hover;
+}
+
+.gallery-label {
+    @apply absolute right-20 bottom-18 bg-ink/83 px-15 py-8 text-13 max-640:right-12 max-640:bottom-12 max-640:px-11 max-640:py-7 max-640:text-12;
+}
+
+.project-details {
+    @apply mt-18;
+}
+
+.project-details .eyebrow {
+    @apply mb-8;
+}
+
+.project-details .eyebrow p {
+    @apply mb-0;
+}
+
+.project-details h2 {
+    @apply text-36 max-640:text-37;
+}
+
+.credit-line {
+    @apply mt-7;
+}
+
+
+.project-details .text-link {
+    @apply mt-8 pb-2 text-14;
+}
+
+.project-credits {
+    @apply mt-13 flex flex-col gap-3;
+}
+
+.project-credits > div {
+    @apply grid grid-cols-credits gap-10 text-14 leading-1.35 max-950:grid-cols-1 max-950:gap-2 max-640:grid-cols-credits max-640:gap-8;
+}
+
+.project-credits dt {
+    @apply whitespace-nowrap text-muted;
+}
+
+.project-credits dd a {
+    @apply underline decoration-fog underline-offset-4;
+}
+
+
+/* GLightbox gallery. The class names below are generated by the library, so they are kept as-is (not kebab-case). */
+.glightbox-open {
+    @apply overflow-hidden;
+}
+
+.glightbox-container {
+    @apply fixed inset-0 z-1000 h-full w-full touch-none overflow-hidden outline-none;
+}
+
+.glightbox-container.inactive {
+    @apply hidden;
+}
+
+.goverlay {
+    @apply fixed inset-0 bg-night;
+}
+
+.gcontainer {
+    @apply relative z-1 flex h-full w-full flex-col items-center justify-center gap-15 overflow-hidden px-70 pt-55 pb-25 max-640:px-35;
+}
+
+.gslider {
+    @apply relative flex h-gallery-image w-full items-center justify-center overflow-hidden max-640:h-gallery-image-sm;
+}
+
+.gslide {
+    @apply pointer-events-none absolute inset-0 flex items-center justify-center opacity-0 select-none;
+}
+
+.gslide.current {
+    @apply pointer-events-auto z-2 opacity-100;
+}
+
+.gslide.prev {
+    @apply z-1 opacity-100;
+}
+
+.gslide-inner-content,
+.ginner-container,
+.gslide-media,
+.gslide-image {
+    @apply flex h-full w-full items-center justify-center;
+}
+
+.gslide-image img {
+    @apply h-full w-full object-contain select-none;
+}
+
+.gallery-caption {
+    @apply text-center text-14 leading-1.5 text-white max-640:text-13;
+}
+.gallery-caption button {
+    @apply outline-none!;
+}
+
+/* Fixed 48px square matches the reference's touch target for the glyph buttons. */
+.gbtn {
+    @apply absolute z-3 flex h-48 w-48 items-center justify-center bg-transparent font-cormorant text-48 leading-none text-white max-640:w-35;
+}
+
+.gclose {
+    @apply top-8 right-20;
+}
+
+.gprev {
+    @apply top-9/20 left-10 max-640:left-0;
+}
+
+.gnext {
+    @apply top-9/20 right-10 max-640:right-0;
+}
+
+.glightbox-button-hidden {
+    @apply hidden;
+}
+
+.gloader {
+    @apply absolute inset-x-0 top-47/100 z-4 mx-auto block size-25 animate-spin rounded-full border-2 border-solid border-white border-r-transparent;
+}
+
+.gfadeIn {
+    @apply animate-lightbox-fade-in;
+}
+
+.gfadeOut {
+    @apply animate-lightbox-fade-out;
+}
+
+.gslideInLeft {
+    @apply animate-lightbox-slide-in-left;
+}
+
+.gslideOutLeft {
+    @apply animate-lightbox-slide-out-left;
+}
+
+.gslideInRight {
+    @apply animate-lightbox-slide-in-right;
+}
+
+.gslideOutRight {
+    @apply animate-lightbox-slide-out-right;
+}
+
+.text-intro-section .content-wrap {
+    @apply max-w-1020;
+}
+
+/* The reference keeps this label at 16px on every screen size. */
+.text-intro-section .eyebrow p {
+    @apply text-16;
+}
+
+.text-intro-section .content:not(.eyebrow) p {
+    @apply text-18 leading-1.9 max-640:text-16;
+}
+
+/* Banner variant with the copy pinned to the top of the photo instead of the bottom. */
+.banner-top {
+    @apply justify-start pt-85 pb-0 max-950:h-580 max-950:min-h-0 max-640:h-480 max-640:pt-40;
+}
+
+.banner-top .cover-image {
+    @apply object-banner-top;
+}
+
+.banner-top h1 {
+    @apply max-640:text-58;
+}
+
+.four-grid {
+    @apply grid grid-cols-4 max-950:grid-cols-2 max-640:grid-cols-1;
+}
+
+/* Vertical dividers on desktop; in the 2x2 layout the first row also gets a bottom divider; stacked items are divided by bottom borders. */
+.four-grid-item {
+    @apply border-r-1 border-solid border-line px-24 py-10 first:pl-0 last:border-r-0 max-950:p-20 max-950:first:pl-20 max-950:even:border-r-0 max-950:nth-1:border-b-1 max-950:nth-2:border-b-1 max-640:border-r-0 max-640:border-b-1 max-640:px-0 max-640:py-20 max-640:first:pl-0 max-640:last:border-b-0;
+}
+
+.four-grid-item .title {
+    @apply mb-12;
+}
+
+.four-grid-item h3 {
+    @apply font-cormorant text-23 leading-1.2 font-medium;
+}
+
+
+/* Commercial page variant of .projects-section: only the values that differ from the projects page. */
+.commercial-projects-section .section-heading h2 {
+    @apply text-48 max-640:text-43;
+}
+
+.commercial-projects-section .projects-grid {
+    @apply gap-x-45 gap-y-70 max-950:gap-x-30 max-950:gap-y-55 max-640:gap-45;
+}
+
+.commercial-projects-section .project-details {
+    @apply mt-25;
+}
+
+.commercial-projects-section .project-details .eyebrow {
+    @apply mb-10;
+}
+
+.commercial-projects-section .project-details .title {
+    @apply mb-16;
+}
+
+.commercial-projects-section .project-details h3 {
+    @apply font-cormorant text-35 leading-1.15 font-medium max-950:text-30 max-640:text-34;
+}
+
+.commercial-projects-section .project-credits {
+    @apply mt-0;
+}
+
+.commercial-projects-section .project-credits > div {
+    @apply grid-cols-credits-sm gap-10 leading-1.45 max-950:block max-640:grid max-640:grid-cols-credits-md;
+}
+
+.commercial-projects-section .project-credits dt {
+    @apply max-950:mb-3;
+}
+
+.commercial-projects-section .media-note {
+    @apply mt-12;
+}
+
+.commercial-projects-section .media-note p {
+    @apply leading-1.45;
+}
+
+/* The top border spans the 1020px content column, not the full width, so the vertical padding sits inside it on this wrapper. */
+.text-cta-section .content-wrap {
+    @apply max-w-1020 border-t-1 border-solid border-line pt-70 pb-90 max-640:pt-45 max-640:pb-60;
+}
+
+.text-cta-section .content:not(.eyebrow) {
+    @apply mb-30;
+}
+
+.text-cta-section .content:not(.eyebrow) p {
+    @apply text-18 leading-1.9 max-640:text-16;
+}
+
+/* Reference sizes this button to at least 255x54: the min-width is copied as-is, the extra height comes from the padding. */
+.text-cta-section .btn {
+    @apply min-w-255 pt-16 pb-15;
 }
