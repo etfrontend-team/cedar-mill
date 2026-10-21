@@ -860,6 +860,9 @@
 .supporting-images img {
     @apply h-auto w-full;
 }
+.supporting-images img{
+    @apply max-h-346 object-cover;
+}
 
 .manufacturer-copy {
     @apply max-950:max-w-800;
