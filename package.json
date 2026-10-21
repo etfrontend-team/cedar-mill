@@ -3,7 +3,8 @@
     "version": "1.0.0",
     "main": "index.js",
     "scripts": {
-        "build": "npx tailwindcss -i ./assets/css/style.css -o ./dist/style.css --watch",
+        "dev": "npx tailwindcss -i ./assets/css/style.css -o ./dist/style.css --watch",
+        "build": "npx tailwindcss -i ./assets/css/style.css -o ./dist/style.css --minify && rm -rf public && mkdir public && cp pages/*.html public/ && cp -R assets dist public/",
         "lint:fix": "npx eslint . --fix && npx prettier --write .",
         "prepare": "husky"
     },

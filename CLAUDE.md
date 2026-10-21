@@ -8,7 +8,8 @@ Static HTML/CSS/JS site (Cedar Mill) built from Figma designs. No framework and 
 
 ## Commands
 
-- `npm run build`: compiles `assets/css/style.css` to `dist/style.css` with the Tailwind CLI. It runs in `--watch` mode, so it does not exit. For a one-off build, run `npx tailwindcss -i ./assets/css/style.css -o ./dist/style.css` without `--watch`.
+- `npm run dev`: compiles `assets/css/style.css` to `dist/style.css` with the Tailwind CLI in `--watch` mode, so it does not exit.
+- `npm run build`: one-off minified CSS build, then assembles the deployable site in `public/` (pages at the root, plus `assets/` and `dist/`). Vercel runs this and serves `public/` (see `vercel.json`). `public/` is git-ignored.
 - `npm run lint:fix`: runs ESLint with `--fix`, then Prettier `--write`, over the whole repo.
 - Husky and lint-staged run ESLint and Prettier on staged files at commit. The repo has no ESLint, Prettier or Husky config files yet, and it is not a git repository yet.
 - No test suite is set up.
