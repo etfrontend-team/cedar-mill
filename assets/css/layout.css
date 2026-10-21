@@ -36,8 +36,12 @@ body>header a {
 }
 
 .main-nav {
-    @apply flex items-center gap-23 max-1150:gap-14 max-950:absolute max-950:inset-x-0 max-950:top-full
-    max-950:hidden max-950:max-h-nav-panel max-950:overflow-y-auto max-950:bg-cream max-950:px-30 max-950:pt-18 max-950:pb-26;
+    @apply max-950:absolute max-950:inset-x-0 max-950:top-full max-950:hidden max-950:max-h-nav-panel
+    max-950:overflow-y-auto max-950:bg-cream max-950:px-30 max-950:pt-18 max-950:pb-26;
+}
+
+.nav-menu {
+    @apply flex items-center gap-23 max-1150:gap-14 max-950:block;
 }
 
 .main-nav.open {

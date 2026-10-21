@@ -28,3 +28,32 @@
 .visually-hidden {
     @apply sr-only;
 }
+/* Compact field: 14px text on the 1.8 body line-height, back to 16px on phones. */
+.input-sm {
+    @apply text-14 leading-1.8 max-640:text-16;
+}
+
+textarea.input {
+    @apply resize-y;
+}
+
+.form-label {
+    @apply block text-14;
+}
+
+.form-label span[aria-hidden] {
+    @apply text-clay;
+}
+
+.optional {
+    @apply text-13 text-muted;
+}
+
+.checkbox {
+    @apply flex items-start gap-12 text-13 leading-1.7;
+}
+
+/* The checkbox is a native control with no content to size it, so its 17px box is copied from the reference. */
+.checkbox input {
+    @apply my-4 size-17 shrink-0 accent-taupe;
+}

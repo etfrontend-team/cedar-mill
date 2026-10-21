@@ -18,7 +18,16 @@
 .cta-section {
     @apply bg-white pt-95 pb-95 max-640:pt-55 max-640:pb-55;
 }
-
+/* The rule spans the content column, not the full-bleed section. */
+.about-cta-section {
+    @apply pt-0 pb-0 max-640:pt-0 max-640:pb-0;
+}
+.about-cta-section .cta-row {
+    @apply border-t-1 border-line pt-70 pb-70 max-640:pt-40 max-640:pb-40;
+}
+.about-cta-section .cta-row .btn {
+    @apply min-w-255;
+}
 .gallery-section {
     @apply  bg-white pt-70 pb-70 max-640:pt-45 max-640:pb-45;
 }
@@ -302,11 +311,11 @@
 }
 
 .testimonial-slide blockquote {
-    @apply mx-auto mb-25 font-cormorant text-quote leading-1.4 font-normal max-640:text-27;
+    @apply mx-auto mb-25 font-cormorant text-quote leading-1.4 font-normal max-640:text-26;
 }
 
 .testimonial-slide figcaption {
-    @apply mx-auto max-w-700 text-15 leading-1.7 font-medium max-640:text-14;
+    @apply mx-auto max-w-700 text-14 leading-1.7 font-medium;
 }
 
 .slider-controls {
@@ -345,19 +354,24 @@
     @apply mt-0 mb-24;
 }
 
-.page-title {
+.columns-section-title {
     @apply mb-60 max-640:mb-35;
 }
 
-.page-title h1 {
+.columns-section-title h1 {
     @apply text-page-title max-640:text-48 max-640:leading-1.06;
 }
-
+.columns-section-title .content-14 {
+    @apply mb-20;
+}
 .media-text-section {
     @apply bg-white pt-80 pb-90 max-640:pt-55 max-640:pb-50
 }
 .projects-grid {
     @apply grid grid-cols-2 gap-30 max-640:grid-cols-1 max-640:gap-40;
+}
+.media-text-section .page-title {
+    @apply pb-60;
 }
 
 .project-entry {
@@ -631,4 +645,361 @@
 /* Reference sizes this button to at least 255x54: the min-width is copied as-is, the extra height comes from the padding. */
 .text-cta-section .btn {
     @apply min-w-255 pt-16 pb-15;
+}
+
+.contact-grid {
+    @apply grid grid-cols-aside-main gap-110 max-1150:gap-60 max-950:grid-cols-1 max-950:gap-50 max-640:gap-35;
+}
+
+.contact-layout h1 {
+    @apply text-64 max-950:max-w-650 max-640:text-48 max-640:leading-1.06;
+}
+
+.contact-offices {
+    @apply mt-45 max-640:mt-25;
+}
+
+/* Office names are h2 for the heading outline but keep the reference's small sans h3 look. */
+.contact-offices .title {
+    @apply mt-35 mb-12;
+}
+
+.contact-offices h2 {
+    @apply font-manrope text-18 leading-1.5 tracking-normal;
+}
+
+.contact-offices .content {
+    @apply mb-12;
+}
+
+.contact-offices .content p,
+.contact-offices > a {
+    @apply text-14;
+}
+
+.contact-offices > a {
+    @apply block;
+}
+
+.contact-offices .office-email {
+    @apply mt-30;
+}
+
+.contact-form-panel {
+    @apply bg-pale p-40 max-950:max-w-800 max-640:-mx-5 max-640:px-20 max-640:py-28;
+}
+
+.contact-form-panel h2 {
+    @apply mb-30 text-44 max-640:text-40;
+}
+
+.inquiry-tabs {
+    @apply mb-30 grid grid-cols-2 gap-8 max-640:gap-7;
+}
+
+/* min-h-48 is the reference's touch target; labels that wrap to two lines grow past it. */
+.inquiry-tabs button {
+    @apply min-h-48 border-1 border-solid border-mist bg-transparent px-12 py-10 text-13 leading-1.5 text-ink max-640:px-8;
+}
+
+.inquiry-tabs button[aria-pressed="true"] {
+    @apply border-taupe bg-taupe text-white;
+}
+
+.form-grid {
+    @apply grid grid-cols-2 gap-20 max-640:grid-cols-1 max-640:gap-18;
+}
+
+.form-full {
+    @apply col-span-full;
+}
+
+.showroom-fields {
+    @apply mt-20 grid gap-20;
+}
+
+.showroom-fields[hidden] {
+    @apply hidden;
+}
+
+.showroom-fields .content p {
+    @apply text-14;
+}
+
+.form-message {
+    @apply mt-22;
+}
+
+.contact-newsletter {
+    @apply my-27;
+}
+
+.contact-newsletter .title {
+    @apply mb-14;
+}
+
+.contact-newsletter h3 {
+    @apply font-cormorant text-26 leading-1.2;
+}
+
+.draft-note {
+    @apply mt-14;
+}
+
+.contact-form > .draft-note {
+    @apply mb-22;
+}
+
+.form-status {
+    @apply mt-18 text-14 leading-1.75 empty:hidden;
+}
+
+.form-success {
+    @apply mt-25 border-t-1 border-solid border-line pt-25;
+}
+
+.form-success .content:not(.draft-note) p {
+    @apply mt-0 mb-22 text-14 leading-1.75;
+}
+
+/* Shorter inner banner: 640 / 580 / 470px tall, copy 82 / 55 / 40px above the bottom edge. */
+.banner-short {
+    @apply min-h-520 pb-82 max-950:h-580 max-950:min-h-480 max-950:pb-55 max-640:h-470 max-640:min-h-450 max-640:pb-40;
+}
+
+.banner-short .content-wrap {
+    @apply max-w-1245;
+}
+
+/* The reference's 780px copy box only caps desktop; at 1150px and below it spans the full content width, which widens the gradient. */
+.banner-short .banner-content {
+    @apply max-w-780 max-1150:max-w-none;
+}
+
+/* This banner keeps the image centred at every width, unlike the home banner's offset crop. */
+.banner-short .cover-image {
+    @apply object-center;
+}
+
+.banner-short .title {
+    @apply max-w-none;
+}
+
+.banner-short h1 {
+    @apply text-hero-title max-640:text-48 max-640:leading-1.06;
+}
+
+.photo-credit {
+    @apply absolute right-25 bottom-18 text-12 text-shadow-credit max-640:right-20 max-640:bottom-12 max-640:left-20 max-640:text-11 max-640:leading-1.5;
+}
+.narrow-text-section
+{
+    @apply bg-white pt-70 pb-70 max-640:pt-45 max-640:pb-45;
+}
+.common-subtitle {
+    @apply mb-20;
+}
+.narrow-text-section .content-wrap {
+    @apply max-w-980;
+}
+
+/* Product categories on the shared .four-grid: 15px vertical padding on desktop instead of 10px. */
+.projects-four-grid {
+    @apply bg-white pt-5 pb-35;
+}
+.projects-four-grid .four-grid-item {
+    @apply py-15 max-950:py-20;
+}
+
+.category-jump {
+    @apply block;
+}
+
+.category-jump span {
+    @apply text-16 font-medium leading-1.4;
+}
+
+.category-jump em {
+    @apply mt-9 block font-cormorant text-26 leading-1.3 font-normal text-muted italic;
+}
+
+.offer-brands {
+    @apply mt-10 flex flex-col gap-7 pt-8;
+}
+
+.offer-brands a {
+    @apply text-14 underline underline-offset-3;
+}
+
+/* Category heading sits inside the first manufacturer section of its category; its top border spans the content column. */
+.category-heading {
+    @apply border-t-1 border-solid border-rule pt-65 pb-45 max-640:pb-30;
+}
+.manufacturer-section .category-heading .content {
+    @apply mb-14;
+}
+
+.category-heading .content-15 {
+    @apply mb-14;
+}
+
+.category-heading h2 {
+    @apply text-48 max-640:text-44;
+}
+
+/* Consecutive manufacturers in one category are split by a lighter rule; sections that open a category use the heading's border instead. */
+.manufacturer-section + .manufacturer-section:not(:has(.category-heading)) .content-wrap {
+    @apply border-t-1 border-solid border-rule-light pt-55;
+}
+
+.manufacturer-main {
+    @apply grid grid-cols-media-copy items-start gap-70 max-1150:gap-45 max-950:grid-cols-1 max-640:gap-30;
+}
+
+.manufacturer-main > img,
+.supporting-images img {
+    @apply h-auto w-full;
+}
+
+.manufacturer-copy {
+    @apply max-950:max-w-800;
+}
+
+.manufacturer-copy .content-15 {
+    @apply mb-18;
+}
+.manufacturer-copy-subtitle {
+    @apply mb-18;
+}
+
+.manufacturer-copy h2 {
+    @apply mb-24 text-44 max-950:max-w-650 max-640:text-40;
+}
+
+.manufacturer-copy h3 {
+    @apply mt-18 mb-8 text-16 leading-1.5 max-640:text-17;
+}
+
+.manufacturer-intro {
+    @apply mb-16;
+}
+
+.manufacturer-intro p {
+    @apply text-14 font-normal leading-1.65 max-640:text-16 tracking-normal normal-case;
+}
+
+.reasons {
+    @apply max-950:columns-2 max-950:gap-x-45 max-640:columns-1;
+}
+
+.reasons p {
+    @apply mb-5 text-14 leading-1.45 break-inside-avoid max-640:mb-6 max-640:text-15 max-640:leading-1.5;
+}
+
+.reasons p + p {
+    @apply mt-0;
+}
+
+.manufacturer-copy .text-link {
+    @apply mt-12;
+}
+
+.supporting-images {
+    @apply mt-22 grid w-18/25 grid-cols-2 items-start gap-30 max-950:w-4/5 max-640:w-full max-640:grid-cols-1 max-640:gap-18;
+}
+
+/* Full-width pair with a wider second photo. */
+.supporting-images-wide {
+    @apply w-full grid-cols-narrow-wider gap-28 max-950:w-full max-640:grid-cols-1 max-640:gap-18;
+}
+
+/* Crops both photos to matching 3:2 frames. */
+.supporting-images-crop img {
+    @apply aspect-3/2 object-cover;
+}
+
+.manufacturer-section {
+    @apply bg-white pt-0 pb-75
+}
+.logo-section {
+    @apply bg-white pb-50 max-640:pb-35;
+}
+
+.logo-section-inner {
+    @apply border-t-1 border-solid border-line text-center;
+}
+
+.logo-section-inner .content-15 {
+    @apply mb-21;
+}
+
+.logo-grid {
+    @apply grid grid-cols-6 gap-24 pt-10 max-950:grid-cols-3 max-950:gap-20 max-640:grid-cols-1 max-640:gap-18;
+}
+
+.logo-card {
+    @apply flex items-center justify-center bg-coal p-22 min-h-125 max-640:p-25 max-640:min-h-130;
+}
+
+.logo-card img {
+    @apply h-85 w-full object-contain max-640:h-65;
+}
+
+.logo-card.logo-card-sm img {
+    @apply h-62;
+}
+
+.logo-card-invert img {
+    @apply invert;
+}
+
+.bordered-columns {
+    @apply grid grid-cols-2 gap-60 max-640:grid-cols-1 max-640:gap-40;
+}
+
+.bordered-column {
+    @apply border-t-1 border-solid border-line pt-40;
+}
+
+.bordered-column .title {
+    @apply mb-20;
+}
+
+.columns-section {
+    @apply bg-white pt-80 pb-100 max-640:pt-55 max-640:pb-60;
+}
+
+.text-intro-section {
+    @apply bg-white pt-60 pb-50 max-640:pt-40 max-640:pb-40;
+}
+
+.four-grid-section {
+    @apply bg-white pt-0 pb-70;
+}
+.commercial-projects-section {
+    @apply bg-white pt-90! pb-90! max-640:pt-50! max-640:pb-50!;
+}
+
+.text-cta-section {
+    @apply bg-white pt-0 pb-0;
+}
+.contact-layout {
+    @apply bg-white pt-80 pb-100 max-640:pt-50 max-640:pb-55;
+}
+.projects-section {
+    @apply bg-white pt-55 pb-0 max-640:pt-35;
+}
+.numbered-cards-section {
+    @apply bg-white pt-100 pb-100 max-950:pt-70 max-640:pt-55 max-640:pb-55
+}
+.image-with-content {
+    @apply bg-pale pt-0 pb-0;
+}
+
+.testimonial-section {
+    @apply bg-pale pt-75 pb-75 max-640:pt-50 max-640:pb-50
+}
+
+.inner-banner .overlay-copy::before{
+    @apply min-h-222
 }

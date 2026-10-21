@@ -62,12 +62,17 @@
   --color-smoke: #959086;
   --color-fog: #c9c7c1;
   --color-night: #171715;
+  --color-clay: #8c7763;
+  --color-rule: #c8c3bb;
+  --color-rule-light: #e4e1db;
+  --color-coal: #111111;
 
   --text-heading-1: clamp(52px, 5.2vw, 84px);
   --text-heading-2: clamp(36px, 3.4vw, 58px);
   --text-heading-3: 17px;
   --text-card-heading: clamp(30px, 2.5vw, 44px);
   --text-page-title: clamp(48px, 5vw, 80px);
+  --text-hero-title: clamp(54px, 5.5vw, 91px);
   --text-quote: clamp(27px, 2.25vw, 38px);
   --text-64: 64px;
   --text-58: 58px;
@@ -83,10 +88,11 @@
   --text-36: 36px;
   --text-32: 32px;
   --text-30: 30px;
-  --text-27: 27px;
+  --text-26: 26px;
   --text-23: 23px;
   --text-22: 22px;
   --text-18: 18px;
+  --text-17: 17px;
   --text-16: 16px;
   --text-15: 15px;
   --text-14: 14px;
@@ -101,6 +107,7 @@
   --leading-1\.12: 1.12;
   --leading-1\.15: 1.15;
   --leading-1\.2: 1.2;
+  --leading-1\.3: 1.3;
   --leading-1\.35: 1.35;
   --leading-1\.4: 1.4;
   --leading-1\.45: 1.45;
@@ -108,6 +115,7 @@
   --leading-1\.6: 1.6;
   --leading-1\.65: 1.65;
   --leading-1\.7: 1.7;
+  --leading-1\.75: 1.75;
   --leading-1\.8: 1.8;
   --leading-1\.85: 1.85;
   --leading-1\.9: 1.9;
@@ -122,6 +130,7 @@
 
   --text-shadow-soft: 0 2px 5px #0009, 0 0 22px #0005;
   --text-shadow-strong: 0 2px 5px #000c, 0 0 20px #0009;
+  --text-shadow-credit: 0 1px 6px #000000;
   --shadow-dropdown: 0 10px 25px #0002;
 
   --grid-template-columns-wide-narrow: 1.3fr 1fr;
@@ -132,6 +141,9 @@
   --grid-template-columns-credits: 150px 1fr;
   --grid-template-columns-credits-sm: 90px 1fr;
   --grid-template-columns-credits-md: 95px 1fr;
+  --grid-template-columns-aside-main: 0.85fr 1.2fr;
+  --grid-template-columns-media-copy: 1.35fr 1fr;
+  --grid-template-columns-narrow-wider: 1fr 1.8fr;
 
   --object-position-hero: center 52%;
   --object-position-hero-mobile: 54% center;
